@@ -1,0 +1,111 @@
+.edit-note-container {
+    background-color: rgba(51, 51, 51, 0.6); /* Dark overlay */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    min-height: 80vh;
+    z-index: 999;
+}
+
+.edit-note-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #fff; /* Better contrast on dark background */
+}
+
+.edit-note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #fffbe7,
+        #fffbe7 28px,
+        #ffe066 29px,
+        #fffbe7 30px
+    );
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(255, 224, 102, 0.12), 0 1.5px 0 #ffe066 inset;
+    padding: 32px 28px;
+    border: 2px solid #ffe066;
+    font-family: 'Segoe Print', 'Comic Sans MS', cursive, sans-serif;
+}
+
+.edit-note-input,
+.edit-note-textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: hidden;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    resize: vertical;
+    background-color: #ffcc00;
+    background: repeating-linear-gradient(
+        to bottom,
+        #fffbe7 ,
+        #fffbe7 28px,
+        #ffe066 24px,
+        #fffbe7 30px
+    );
+}
+
+.edit-note-input:focus,
+.edit-note-textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    
+    background-color: #0084ff;
+}
+
+.edit-note-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.edit-note-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.edit-note-btn.cancel {
+    background: #6c757d;
+}
+
+.edit-note-btn:hover {
+    background: #0056b3;
+}
+
+.edit-note-btn.cancel:hover {
+    background: #495057;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .edit-note-container {
+        max-width: 95%;
+        min-height: 90vh;
+        padding: 16px;
+    }
+
+    .edit-note-form {
+        padding: 20px 16px;
+    }
+}

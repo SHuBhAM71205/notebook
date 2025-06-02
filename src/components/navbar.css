@@ -1,0 +1,17 @@
+body.dark-theme {
+    background: #181a1b !important;
+    color: #f1f1f1 !important;
+    transition: background 0.4s;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background 0.4s;
+}
+
+.navbar-brand span {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
